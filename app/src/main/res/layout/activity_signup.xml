@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.activities.LoginActivity">
+    tools:context=".view.ui.activities.SignupActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="118dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/logopowertechs"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,25 +19,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/power"
-        android:textColor="@color/red"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:lineSpacingExtra="34sp"
         android:text="@string/techs"
         android:textAllCaps="false"
@@ -45,108 +30,117 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/power"
+        android:textColor="@color/red"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <FrameLayout
-        android:layout_width="373dp"
-        android:layout_height="228dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="343dp"
+        android:layout_height="371dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rectangulo_borde_rojo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/txt_registro_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:width="300dp"
+        android:ems="10"
+        android:hint="@string/nombre_usuario"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColorHint="#757575"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/txt_login_correo"
+        android:id="@+id/txt_registro_correo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:ems="10"
         android:hint="@string/correo"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
         android:textColorHint="#757575"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_registro_nombre" />
 
     <EditText
-        android:id="@+id/txt_login_contrasena"
+        android:id="@+id/txt_registro_contrasena1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:width="300dp"
         android:ems="10"
         android:hint="@string/contrasena"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:minHeight="48dp"
         android:textColorHint="#757575"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_login_correo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_registro_correo" />
 
-    <TextView
-        android:id="@+id/txt_login_registro"
+    <EditText
+        android:id="@+id/txt_registro_contrasena2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="92dp"
-        android:text="@string/registrarme"
-        android:textColor="@color/red"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:width="300dp"
+        android:ems="10"
+        android:hint="@string/confirme_contrasena"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColorHint="#757575"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_ingresar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_registro_contrasena1" />
 
     <Button
-        android:id="@+id/btn_login_ingresar"
+        android:id="@+id/btn_registro_enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="50dp"
+        android:width="200dp"
         android:backgroundTint="@color/blue"
-        android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="20dp"
         android:paddingBottom="10dp"
-        android:text="@string/ingresar"
+        android:text="@string/enviar"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_login_contrasena" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/sin_cuenta"
-        android:textColor="#757575"
-        android:textColorHint="#757575"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_login_registro"
-        app:layout_constraintHorizontal_bias="0.651"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_ingresar"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="textView2,textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_registro_contrasena2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
