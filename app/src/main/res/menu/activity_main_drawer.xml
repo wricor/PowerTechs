@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/nav_item_perfil"
+            android:title="@string/perfil" />
+        <item
+            android:id="@+id/nav_item_editar_perfil"
+            android:title="@string/editar_perfil" />
+        <item
+            android:id="@+id/nav_item_productos"
+            android:title="@string/productos" />
+        <item
+            android:id="@+id/nav_item_carrito"
+            android:title="@string/carrito" />
+        <item
+            android:id="@+id/nav_item_comentarios"
+            android:title="@string/comentarios" />
+        <item
+            android:id="@+id/nav_item_contactenos"
+            android:title="@string/contactenos" />
+    </group>
+</menu>

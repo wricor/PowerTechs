@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">PowerTechs</string>
+    <string name="comprar">Comprar</string>
+    <string name="carrito">Carrito de Compras</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="contactenos">Contactenos</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="confirme_contrasena">Confirme Contraseña</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="enviar">Enviar</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="logo">Logo PowerTechs</string>
+    <string name="menu">Menú</string>
+    <string name="nombre_usuario">Nombre de Usuario</string>
+    <string name="power">Power</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="perfil">Perfil</string>
+    <string name="productos">Productos</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="sin_cuenta">¿No tienes cuenta?</string>
+    <string name="techs">Techs</string>
 </resources>
