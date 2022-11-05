@@ -16,4 +16,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="menu" parent="Theme.PowerTechs">
+        <item name="android:textSize">22dp</item>
+    </style>
 </resources>

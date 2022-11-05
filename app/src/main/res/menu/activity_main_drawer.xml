@@ -2,24 +2,40 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group>
+    <group android:id="@+id/profiles">
         <item
             android:id="@+id/nav_item_perfil"
+            android:icon="@drawable/ic_profile"
             android:title="@string/perfil" />
         <item
             android:id="@+id/nav_item_editar_perfil"
+            android:icon="@drawable/ic_edit_profile"
             android:title="@string/editar_perfil" />
+    </group>
+    <group android:id="@+id/products">
         <item
             android:id="@+id/nav_item_productos"
+            android:icon="@drawable/ic_products"
             android:title="@string/productos" />
         <item
             android:id="@+id/nav_item_carrito"
+            android:icon="@drawable/ic_shop"
             android:title="@string/carrito" />
+    </group>
+    <group android:id="@+id/contacts">
         <item
             android:id="@+id/nav_item_comentarios"
+            android:icon="@drawable/ic_comments"
             android:title="@string/comentarios" />
         <item
             android:id="@+id/nav_item_contactenos"
+            android:icon="@drawable/ic_contact_us"
             android:title="@string/contactenos" />
+    </group>
+    <group android:id="@+id/close">
+        <item
+            android:id="@+id/nav_item_close"
+            android:icon="@drawable/ic_close"
+            android:title="@string/cerrar_sesion" />
     </group>
 </menu>
