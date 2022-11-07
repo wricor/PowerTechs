@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        val commentFragment = CommentFragment()
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationMenu)
         bottomNavigationView.setOnItemSelectedListener {
             //val contr = Navigation.findNavController(this, R.id.nav_host_fragment)
