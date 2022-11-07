@@ -35,7 +35,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="505dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -43,24 +43,21 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/editTextTextMultiLine2"
+            android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:textSize="28sp"
-            tools:text="@string/visitanos" />
+            android:text="@string/visitanos"
+            android:textColor="@color/blue"
+            android:textSize="28sp" />
 
         <TextView
-            android:id="@+id/editTextTextMultiLine3"
+            android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:textSize="28sp"
-            tools:text="@string/nos_encontramos" />
+            android:text="@string/nos_encontramos"
+            android:textColor="@color/blue"
+            android:textSize="28sp" />
+
     </LinearLayout>
 
 </LinearLayout>

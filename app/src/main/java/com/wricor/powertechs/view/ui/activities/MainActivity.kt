@@ -9,9 +9,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
+import androidx.navigation.ui.navigateUp
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.wricor.powertechs.R
+import com.wricor.powertechs.view.ui.fragments.CommentFragment
+import com.wricor.powertechs.view.ui.fragments.ProductsFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawer: DrawerLayout
@@ -33,6 +39,32 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+
+        val commentFragment = CommentFragment()
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationMenu)
+        bottomNavigationView.setOnItemSelectedListener {
+            //val contr = Navigation.findNavController(this, R.id.nav_host_fragment)
+            val contr = Navigation.findNavController(this, R.id.nav_host_fragment)
+            when(it.itemId){
+                R.id.bottom_products -> {
+                    contr.navigate(R.id.productsFragment)
+                    true
+                }
+                R.id.bottom_requests -> {
+                    contr.navigate(R.id.requestsFragment)
+                    true
+                }
+                R.id.bottom_comments -> {
+                    contr.navigate(R.id.commentFragment)
+                    true
+                }
+                R.id.bottom_settings -> {
+                    contr.navigate(R.id.settingsFragment)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

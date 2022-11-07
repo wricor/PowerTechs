@@ -1,4 +1,5 @@
 <resources>
+    <string name="ajustes">Ajustes</string>
     <string name="al_carrito">Añadir al Carrito</string>
     <string name="apellidos">Apellido(s)</string>
     <string name="app_name">PowerTechs</string>
@@ -30,6 +31,7 @@
     <string name="numero_celular">Número de Celular</string>
     <string name="pagar">Pagar</string>
     <string name="pedido">Pedido</string>
+    <string name="pedidos">Pedidos</string>
     <string name="power">Power</string>
     <string name="navigation_drawer_close">Close</string>
     <string name="navigation_drawer_open">Open</string>

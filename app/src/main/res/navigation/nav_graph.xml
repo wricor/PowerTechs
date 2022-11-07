@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_productsFragment_to_contactFragment"
             app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_requestsFragment"
+            app:destination="@id/requestsFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -50,4 +56,14 @@
         android:name="com.wricor.powertechs.view.ui.fragments.ContactFragment"
         android:label="fragment_contact"
         tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/requestsFragment"
+        android:name="com.wricor.powertechs.RequestsFragment"
+        android:label="fragment_requests"
+        tools:layout="@layout/fragment_requests" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.wricor.powertechs.view.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
