@@ -25,6 +25,8 @@
     <string name="iva">IVA</string>
     <string name="logo">Logo PowerTechs</string>
     <string name="menu">Menú</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="navigation_drawer_open">Open</string>
     <string name="nombres">Nombre(s)</string>
     <string name="nombre_usuario">Nombre de Usuario</string>
     <string name="nos_encontramos">Nos encontramos en el Barrio Chicó en la Carrera 11a # 94&#8211;15.</string>
@@ -33,8 +35,6 @@
     <string name="pedido">Pedido</string>
     <string name="pedidos">Pedidos</string>
     <string name="power">Power</string>
-    <string name="navigation_drawer_close">Close</string>
-    <string name="navigation_drawer_open">Open</string>
     <string name="perfil">Perfil</string>
     <string name="productos">Productos</string>
     <string name="registrarme">Registrarme</string>
@@ -43,6 +43,7 @@
     <string name="techs">Techs</string>
     <string name="tipo_documento">Tipo de Documento</string>
     <string name="total">Total</string>
+    <string name="ver_detalle">Ver Detalle</string>
     <string name="visitanos">Visítanos para tener el gusto de atenderte.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

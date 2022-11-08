@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangulo_borde_azul"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="17dp"
+            android:text="Valor"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Pedido"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <Button
+            android:id="@+id/idProducto"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="85dp"
+            android:text="@string/ver_detalle" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

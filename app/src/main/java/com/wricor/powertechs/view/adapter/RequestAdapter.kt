@@ -9,11 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.wricor.powertechs.R
-import com.wricor.powertechs.model.Products
+import com.wricor.powertechs.model.Requests
 
-class TechAdapter(val productList: List<Products>): RecyclerView.Adapter<TechAdapter.ViewHolder>() {
+class RequestAdapter(val requestList: List<Requests>): RecyclerView.Adapter<RequestAdapter.ViewHolder>() {
     override fun onCreateViewHolder(ViewGroup: ViewGroup, i: Int): ViewHolder {
-        val v = LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_tech, ViewGroup, false)
+        val v = LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_requests, ViewGroup, false)
         return ViewHolder(v)
     }
 
@@ -23,10 +23,9 @@ class TechAdapter(val productList: List<Products>): RecyclerView.Adapter<TechAda
         val itemPrice = ItemView.findViewById<TextView>(R.id.price)
         //val itemId = ItemView.findViewById<Button>(R.id.idProducto)
 
-        fun render(productModel: Products) {
-            Glide.with(itemImage.context).load(productModel.image).into(itemImage)
-            itemTitle.text = productModel.title
-            itemPrice.text = productModel.price
+        fun render(requestModel: Requests) {
+            itemTitle.id = requestModel.id
+            itemPrice.text = requestModel.value
             //itemId.id = productModel.id
         }
     }
@@ -35,11 +34,11 @@ class TechAdapter(val productList: List<Products>): RecyclerView.Adapter<TechAda
         //when(viewHolder){
         //    is ViewHolder -> viewHolder.render(productList[i])
         //}
-        val item  = productList[i]
+        val item  = requestList[i]
         viewHolder.render(item)
     }
 
     override fun getItemCount(): Int {
-        return productList.size
+        return requestList.size
     }
 }

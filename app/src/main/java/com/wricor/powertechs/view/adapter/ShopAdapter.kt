@@ -11,9 +11,9 @@ import com.bumptech.glide.Glide
 import com.wricor.powertechs.R
 import com.wricor.powertechs.model.Products
 
-class TechAdapter(val productList: List<Products>): RecyclerView.Adapter<TechAdapter.ViewHolder>() {
+class ShopAdapter(val productList: List<Products>): RecyclerView.Adapter<ShopAdapter.ViewHolder>() {
     override fun onCreateViewHolder(ViewGroup: ViewGroup, i: Int): ViewHolder {
-        val v = LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_tech, ViewGroup, false)
+        val v = LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_shop, ViewGroup, false)
         return ViewHolder(v)
     }
 
@@ -27,14 +27,10 @@ class TechAdapter(val productList: List<Products>): RecyclerView.Adapter<TechAda
             Glide.with(itemImage.context).load(productModel.image).into(itemImage)
             itemTitle.text = productModel.title
             itemPrice.text = productModel.price
-            //itemId.id = productModel.id
         }
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int){
-        //when(viewHolder){
-        //    is ViewHolder -> viewHolder.render(productList[i])
-        //}
         val item  = productList[i]
         viewHolder.render(item)
     }
