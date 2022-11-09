@@ -24,7 +24,7 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/fotoperfil"
         app:civ_border_width="3dp"
-        app:civ_border_color="@color/red"/>
+        app:civ_border_color="@color/red" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,9 +52,12 @@
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:importantForAutofill="no"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:textSize="28sp" />
+                android:labelFor="@id/textView11"
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -69,8 +72,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -81,9 +86,11 @@
                 android:textSize="20sp" />
 
             <Spinner
-                android:id="@+id/spn_tipodoc"
+                android:id="@+id/spn_registro_tipodoc"
                 android:layout_width="match_parent"
-                android:layout_height="48dp" />
+                android:layout_height="48dp"
+                android:entries="@array/tipo_documento"
+                android:theme="@style/spinner" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -94,12 +101,14 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/txt_registro_documento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -115,7 +124,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:textSize="28sp" />
+                android:importantForAutofill="no"
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -126,12 +137,14 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/txt_registro_direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -142,12 +155,14 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/txt_registro_celular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:importantForAutofill="no"
                 android:inputType="phone"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:ignore="LabelFor" />
         </LinearLayout>
     </ScrollView>
 

@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_productsFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_productsFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -66,4 +69,9 @@
         android:name="com.wricor.powertechs.view.ui.fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.wricor.powertechs.view.ui.activities.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

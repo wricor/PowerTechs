@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "508411827196",
+    "project_id": "powertechs-82df6",
+    "storage_bucket": "powertechs-82df6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508411827196:android:91c97290e2170ee00f1879",
+        "android_client_info": {
+          "package_name": "com.wricor.powertechs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508411827196-pc6kojhe65ag3vhlga0rlvha8dmmukol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14_feXfJpScG88sFWY1wtzQxySDX9IJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508411827196-pc6kojhe65ag3vhlga0rlvha8dmmukol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

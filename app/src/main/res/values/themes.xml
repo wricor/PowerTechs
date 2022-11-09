@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.PowerTechs" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -16,7 +16,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <!-- <style name="ThemeOverlay.MyPopupTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:textColor">@color/red</item>
+    </style> -->
     <style name="menu" parent="Theme.PowerTechs">
-        <item name="android:textSize">22dp</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="spinner" parent="Theme.PowerTechs">
+        <item name="android:textSize">24sp</item>
     </style>
 </resources>

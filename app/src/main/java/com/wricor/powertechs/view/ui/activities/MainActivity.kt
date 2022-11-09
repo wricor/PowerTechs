@@ -4,28 +4,27 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
-import androidx.navigation.ui.navigateUp
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.wricor.powertechs.R
-import com.wricor.powertechs.view.ui.fragments.CommentFragment
-import com.wricor.powertechs.view.ui.fragments.ProductsFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
 
@@ -40,9 +39,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+        // Bottom Naigation
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationMenu)
         bottomNavigationView.setOnItemSelectedListener {
-            //val contr = Navigation.findNavController(this, R.id.nav_host_fragment)
             val contr = Navigation.findNavController(this, R.id.nav_host_fragment)
             when(it.itemId){
                 R.id.bottom_products -> {
@@ -64,6 +63,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 else -> false
             }
         }
+
+        //Firebase
+        firebaseAuth = Firebase.auth
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -87,6 +89,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_contactenos -> {
                 controller.navigate(R.id.contactFragment)
             }
+            R.id.nav_item_cerrar -> {
+                firebaseAuth.signOut()
+                controller.navigate(R.id.action_productsFragment_to_loginActivity)
+            }
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
@@ -107,5 +113,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        return
     }
 }
