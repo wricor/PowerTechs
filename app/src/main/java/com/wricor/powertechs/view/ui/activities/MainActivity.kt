@@ -17,12 +17,17 @@ import com.google.firebase.ktx.Firebase
 import com.wricor.powertechs.R
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    lateinit var firebaseAuth: FirebaseAuth
+
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-    lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //Firebase
+        firebaseAuth = Firebase.auth
 
         // Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
@@ -63,9 +68,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 else -> false
             }
         }
-
-        //Firebase
-        firebaseAuth = Firebase.auth
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

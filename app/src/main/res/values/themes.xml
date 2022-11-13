@@ -16,8 +16,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <!-- <style name="ThemeOverlay.MyPopupTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:textColor">@color/red</item>
+    <!-- <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/red</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Theme.PowerTechs</item>
     </style> -->
     <style name="menu" parent="Theme.PowerTechs">
         <item name="android:textSize">22sp</item>

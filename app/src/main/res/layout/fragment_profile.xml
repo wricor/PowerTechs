@@ -17,14 +17,46 @@
         android:textColor="@color/blue"
         android:textSize="32sp" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/fotoperfil"
-        app:civ_border_width="3dp"
-        app:civ_border_color="@color/red"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/fotoperfil"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="3dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_profile_camera"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                app:icon="@android:drawable/ic_menu_camera"
+                app:iconTint="@color/white" />
+
+            <Button
+                android:id="@+id/btn_profile_galery"
+                android:layout_width="63dp"
+                android:layout_height="wrap_content"
+                app:icon="@android:drawable/ic_menu_gallery"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"

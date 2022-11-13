@@ -31,6 +31,7 @@
     <string name="nombres">Nombre(s)</string>
     <string name="nombre_usuario">Nombre de Usuario</string>
     <string name="nos_encontramos">Nos encontramos en el Barrio Chicó en la Carrera 11a # 94&#8211;15.</string>
+    <string name="nueva_contrasena">Nueva Contraseña</string>
     <string name="numero_celular">Número de Celular</string>
     <string name="pagar">Pagar</string>
     <string name="pedido">Pedido</string>
@@ -40,7 +41,9 @@
     <string name="precio">Precio</string>
     <string name="producto">Producto</string>
     <string name="productos">Productos</string>
+    <string name="recuperar_contrasena">Recuperar Contraseña</string>
     <string name="registrarme">Registrarme</string>
+    <string name="restaurar">Restaurar</string>
     <string name="sin_cuenta">¿No tienes cuenta?</string>
     <string name="subtotal">Subtotal</string>
     <string name="techs">Techs</string>
