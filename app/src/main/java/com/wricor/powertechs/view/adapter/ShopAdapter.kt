@@ -3,7 +3,6 @@ package com.wricor.powertechs.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -21,11 +20,10 @@ class ShopAdapter(val productList: List<Products>): RecyclerView.Adapter<ShopAda
         val itemImage = ItemView.findViewById<ImageView>(R.id.image)
         val itemTitle = ItemView.findViewById<TextView>(R.id.title)
         val itemPrice = ItemView.findViewById<TextView>(R.id.price)
-        //val itemId = ItemView.findViewById<Button>(R.id.idProducto)
 
         fun render(productModel: Products) {
             Glide.with(itemImage.context).load(productModel.image).into(itemImage)
-            itemTitle.text = productModel.title
+            itemTitle.text = productModel.product
             itemPrice.text = productModel.price
         }
     }

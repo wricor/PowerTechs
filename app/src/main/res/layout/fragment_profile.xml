@@ -80,12 +80,15 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/editTextTextPersonName"
+            <EditText
+                android:id="@+id/txt_profile_nombres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:labelFor="@id/textView11"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
 
@@ -97,12 +100,14 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/editTextTextPersonName2"
+            <EditText
+                android:id="@+id/txt_profile_apellidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
 
@@ -115,7 +120,7 @@
                 android:textSize="20sp" />
 
             <Spinner
-                android:id="@+id/spn_tipodoc_2"
+                android:id="@+id/spn_profile_tipodoc"
                 android:layout_width="match_parent"
                 android:layout_height="48dp" />
 
@@ -127,12 +132,14 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/editTextTextEmailAddress"
+            <EditText
+                android:id="@+id/txt_profile_documento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
 
@@ -144,12 +151,14 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/txt_registro_documento"
+            <EditText
+                android:id="@+id/txt_profile_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
 
@@ -161,12 +170,14 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/txt_registro_direccion"
+            <EditText
+                android:id="@+id/txt_profile_direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="textNoSuggestions"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
 
@@ -178,19 +189,21 @@
                 android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/txt_registro_celular"
+            <EditText
+                android:id="@+id/txt_profile_celular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textIsSelectable="false"
                 android:textSize="28sp"
                 tools:ignore="LabelFor" />
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_profile_editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -199,7 +212,7 @@
         android:backgroundTint="@color/blue"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="@string/enviar"
+        android:text="@string/editar"
         android:textSize="24sp" />
 
 </LinearLayout>

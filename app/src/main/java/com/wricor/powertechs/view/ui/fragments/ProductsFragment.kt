@@ -5,44 +5,47 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.wricor.powertechs.R
-import com.wricor.powertechs.model.Products
-import com.wricor.powertechs.view.adapter.TechAdapter
+import com.wricor.powertechs.view.adapter.ProductsAdapter
+import com.wricor.powertechs.viewmodel.ProductsViewModel
 
 class ProductsFragment : Fragment() {
     lateinit var recyclerProd: RecyclerView
-    //idProducto.setOnClickListener { toast() }
+
+    lateinit var firebaseAuth: FirebaseAuth
+
+    lateinit var adapter: ProductsAdapter
+    private val viewModel by lazy { ViewModelProvider(this).get(ProductsViewModel::class.java) }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        firebaseAuth = Firebase.auth
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_products, container, false)
         recyclerProd = view.findViewById(R.id.recyclerview)
-        val product = listOf<Products>(
-            Products(1,"Computador aa", "$ 1.180.000", R.drawable.pr_pca),
-            Products(2, "Computador bb", "$ 1.200.000", R.drawable.pr_pcb),
-            Products(3, "Computador cc", "$ 1.450.000", R.drawable.pr_pcc),
-            Products(4, "Monitor aa", "$ 680.000", R.drawable.pr_displaya),
-            Products(5, "Monitor bb", "$ 700.000", R.drawable.pr_displayb),
-            Products(6, "Monitor cc", "$ 550.000", R.drawable.pr_displayc)
-        )
-        var productsMutableList: MutableList<Products> = product.toMutableList()
-        //val titles = arrayOf("Computador aa", "Computador bb", "Computador cc", "Monitor aa", "Monitor bb", "Monitor cc")
-        //val price = arrayOf("$ 1.180.000", "$ 1.200.000", "$ 1.450.000", "$ 680.000", "$ 700.000", "$ 550.000")
-        //val image = arrayOf(R.drawable.pr_pca, R.drawable.pr_pcb, R.drawable.pr_pcc, R.drawable.pr_displaya, R.drawable.pr_displayb, R.drawable.pr_displayc)
-
-        val adapter = TechAdapter(productsMutableList)
+        adapter = ProductsAdapter(requireContext())
         recyclerProd.layoutManager = LinearLayoutManager(context)
         recyclerProd.adapter = adapter
-        // Inflate the layout for this fragment
+        observeData()
+
         return view
     }
 
-    //private fun toast(){
-    //    Toast.makeText(this, "Toast!", Toast.LENGTH_LONG).show()
-    //}
+    fun observeData(){
+        viewModel.productData().observe(viewLifecycleOwner, Observer {
+            adapter.setListData(it)
+            adapter.notifyDataSetChanged()
+        })
+    }
 }
