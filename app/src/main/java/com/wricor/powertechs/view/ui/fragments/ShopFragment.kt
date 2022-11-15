@@ -10,12 +10,16 @@ import com.wricor.powertechs.R
 
 class ShopFragment : Fragment() {
     lateinit var recyclerProd: RecyclerView
+
+    //lateinit var shopList: MutableList<Products>
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_shop, container, false)
         recyclerProd = view.findViewById(R.id.recyclerview)
+        //Toast.makeText(context, "Shop: " + shopList[0], Toast.LENGTH_SHORT).show()
 
         return view
     }

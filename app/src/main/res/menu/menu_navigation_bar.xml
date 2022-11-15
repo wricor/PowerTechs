@@ -13,7 +13,11 @@
         android:title="@string/comentarios"
         android:icon="@drawable/ic_comments" />
     <item
+        android:id="@+id/bottom_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/perfil" />
+    <!-- <item
         android:id="@+id/bottom_settings"
         android:title="@string/ajustes"
-        android:icon="@drawable/ic_settings" />
+        android:icon="@drawable/ic_settings" /> -->
 </menu>

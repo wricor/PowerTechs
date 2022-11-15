@@ -5,10 +5,10 @@
             android:id="@+id/nav_item_perfil"
             android:icon="@drawable/ic_profile"
             android:title="@string/perfil" />
-        <item
+        <!-- <item
             android:id="@+id/nav_item_editar_perfil"
             android:icon="@drawable/ic_edit_profile"
-            android:title="@string/editar_perfil" />
+            android:title="@string/editar_perfil" /> -->
     </group>
     <group android:id="@+id/products">
         <item

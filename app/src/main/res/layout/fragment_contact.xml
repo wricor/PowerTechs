@@ -59,6 +59,18 @@
             android:text="@string/nos_encontramos"
             android:textColor="@color/blue"
             android:textSize="28sp" />
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

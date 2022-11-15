@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     contr.navigate(R.id.commentFragment)
                     true
                 }
-                R.id.bottom_settings -> {
-                    contr.navigate(R.id.settingsFragment)
+                R.id.bottom_profile -> {
+                    contr.navigate(R.id.profileFragment)
                     true
                 }
                 else -> false
@@ -76,9 +76,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_perfil -> {
                 controller.navigate(R.id.profileFragment)
             }
-            R.id.nav_item_editar_perfil -> {
+            /*R.id.nav_item_editar_perfil -> {
                 controller.navigate(R.id.editProfileFragment)
-            }
+            }*/
             R.id.nav_item_carrito -> {
                 controller.navigate(R.id.shopFragment)
             }
