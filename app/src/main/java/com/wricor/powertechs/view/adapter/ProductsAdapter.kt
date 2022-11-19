@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
@@ -43,6 +44,10 @@ class ProductsAdapter(private val context: android.content.Context): RecyclerVie
         viewHolder.binWeb(product)
         // Escucha de boton
         viewHolder.itemView.findViewById<Button>(R.id.btn_products_delete).isVisible = false
+        viewHolder.itemView.findViewById<TextView>(R.id.product).setOnClickListener {
+            Toast.makeText(context, "Muestra detalles" + productsList[i], Toast.LENGTH_SHORT).show()
+        }
+
         viewHolder.itemView.findViewById<Button>(R.id.btn_products_add).setOnClickListener {
             //onItemClick?.invoke(product)
             Toast.makeText(context, "Click acá " + productsList[i], Toast.LENGTH_SHORT).show()
