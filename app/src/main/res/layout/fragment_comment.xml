@@ -53,13 +53,13 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/txt_comentario_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangulo_borde_azul"
             android:ems="10"
             android:importantForAutofill="no"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:textSize="28sp"
             tools:ignore="LabelFor" />
 
@@ -72,7 +72,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/txt_comentario_texto"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:background="@drawable/rectangulo_borde_azul"
@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_comentario_enviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

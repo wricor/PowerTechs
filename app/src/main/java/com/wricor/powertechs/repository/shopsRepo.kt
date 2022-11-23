@@ -3,20 +3,20 @@ package com.wricor.powertechs.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
-import com.wricor.powertechs.model.Products
+import com.wricor.powertechs.model.Shop
 
-class repo {
-    fun getProductsData(): LiveData<MutableList<Products>> {
-        val mutableData = MutableLiveData<MutableList<Products>>()
+class shopsRepo {
+    fun getShopsData(): LiveData<MutableList<Shop>> {
+        val mutableData = MutableLiveData<MutableList<Shop>>()
 
-        FirebaseFirestore.getInstance().collection("productos").get()
+        FirebaseFirestore.getInstance().collection("compras").get()
             .addOnSuccessListener { result ->
-                val listData = mutableListOf<Products>()
+                val listData = mutableListOf<Shop>()
                 for(document in result) {
                     val product = document.getString("product")
                     val price = document.getString("price")
                     val image = document.getString("image")
-                    val prod = Products(product!!, price!!, image!!)
+                    val prod = Shop(product!!, price!!, image!!)
                     listData.add(prod)
                 }
                 mutableData.value = listData

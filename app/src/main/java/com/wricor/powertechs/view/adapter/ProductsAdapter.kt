@@ -1,24 +1,19 @@
 package com.wricor.powertechs.view.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.wricor.powertechs.R
 import com.wricor.powertechs.model.Products
 
-class ProductsAdapter(private val context: android.content.Context): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+class ProductsAdapter(private val context: Context, private var clickListener: OnProductItemClickListener): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
     private var productsList = mutableListOf<Products>()
-    // Lista para agregar al carrito
-    var shopList = mutableListOf<Products>()
-    var onItemClick: ((Products) -> Unit)? = null
 
     fun setListData(data: MutableList<Products>) {
         productsList = data
@@ -30,40 +25,24 @@ class ProductsAdapter(private val context: android.content.Context): RecyclerVie
     }
 
     inner class ViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView){
-        fun binWeb(prod: Products) {
+        fun binWeb(prod: Products, action: OnProductItemClickListener) {
             itemView.findViewById<TextView>(R.id.product).text = prod.product
             itemView.findViewById<TextView>(R.id.price).text = prod.price
             Picasso.with(itemView.context).load(prod.image).into(itemView.findViewById<ImageView>(R.id.image))
-            //itemView.findViewById<Button>(R.id.btn_products_add).setOnClickListener { Toast.makeText(context, "Click add", Toast.LENGTH_SHORT) }
+            val btnProductsAdd = itemView.findViewById<Button>(R.id.btn_products_add)
+            btnProductsAdd.setOnClickListener {
+                action.onItemClick(prod, adapterPosition)
+            }
+            val btnProductsDelete = itemView.findViewById<Button>(R.id.btn_products_delete)
+            btnProductsDelete.setOnClickListener {
+                action.onItemClickDelete(prod, adapterPosition)
+            }
         }
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int){
         val product = productsList[i]
-        //Toast.makeText(context, "Entra a : " + i, Toast.LENGTH_LONG).show()
-        viewHolder.binWeb(product)
-        // Escucha de boton
-        viewHolder.itemView.findViewById<Button>(R.id.btn_products_delete).isVisible = false
-        viewHolder.itemView.findViewById<TextView>(R.id.product).setOnClickListener {
-            Toast.makeText(context, "Muestra detalles" + productsList[i], Toast.LENGTH_SHORT).show()
-        }
-
-        viewHolder.itemView.findViewById<Button>(R.id.btn_products_add).setOnClickListener {
-            //onItemClick?.invoke(product)
-            Toast.makeText(context, "Click acá " + productsList[i], Toast.LENGTH_SHORT).show()
-            shopList.add(productsList[i])
-            Toast.makeText(context, "Elementos shop: " + shopList, Toast.LENGTH_SHORT).show()
-            viewHolder.itemView.findViewById<Button>(R.id.btn_products_add).isVisible = false
-            viewHolder.itemView.findViewById<Button>(R.id.btn_products_delete).isVisible = true
-        }
-        viewHolder.itemView.findViewById<Button>(R.id.btn_products_delete).setOnClickListener {
-            //onItemClick?.invoke(product)
-            Toast.makeText(context, "Borra acá " + productsList[i], Toast.LENGTH_SHORT).show()
-            shopList.removeAll {it.equals(productsList[i])}
-            Toast.makeText(context, "Elementos shop: " + shopList, Toast.LENGTH_SHORT).show()
-            viewHolder.itemView.findViewById<Button>(R.id.btn_products_add).isVisible = true
-            viewHolder.itemView.findViewById<Button>(R.id.btn_products_delete).isVisible = false
-        }
+        viewHolder.binWeb(product, clickListener)
     }
 
     override fun getItemCount(): Int {
@@ -73,4 +52,9 @@ class ProductsAdapter(private val context: android.content.Context): RecyclerVie
             0
         }
     }
+}
+
+interface OnProductItemClickListener {
+    fun onItemClick(product: Products, position: Int)
+    fun onItemClickDelete(product: Products, position: Int)
 }

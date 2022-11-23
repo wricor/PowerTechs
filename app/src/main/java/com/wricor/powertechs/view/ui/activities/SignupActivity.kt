@@ -20,16 +20,16 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var bdReference: DatabaseReference
     private lateinit var database: FirebaseDatabase
 
-    lateinit var txtRegistroNombres: EditText
-    lateinit var txtRegistroApellidos: EditText
-    lateinit var spnRegistroTipodoc: Spinner
-    lateinit var txtRegistroDocumento: EditText
-    lateinit var txtRegistroCorreo: EditText
-    lateinit var txtRegistroDireccion: EditText
-    lateinit var txtRegistroCelular: EditText
-    lateinit var txtRegistroContrasena1: EditText
-    lateinit var txtRegistroContrasena2: EditText
-    lateinit var btnRegistroEnviar: Button
+    private lateinit var txtRegistroNombres: EditText
+    private lateinit var txtRegistroApellidos: EditText
+    private lateinit var spnRegistroTipodoc: Spinner
+    private lateinit var txtRegistroDocumento: EditText
+    private lateinit var txtRegistroCorreo: EditText
+    private lateinit var txtRegistroDireccion: EditText
+    private lateinit var txtRegistroCelular: EditText
+    private lateinit var txtRegistroContrasena1: EditText
+    private lateinit var txtRegistroContrasena2: EditText
+    private lateinit var btnRegistroEnviar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
